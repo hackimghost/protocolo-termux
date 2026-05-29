@@ -45,7 +45,6 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.8);
         }
         
-        /* Módulo de Alerta Crítico (Supply Chain) */
         .module-critical {
             background: rgba(40, 0, 0, 0.6);
             border: 1px solid var(--c-red);
@@ -114,35 +113,33 @@ proot-distro login archlinux</code></pre>
     <div class="module">
         <h2>[5] O PARADIGMA ANDROID 13 E O ARSENAL KALI</h2>
         <p>Saber manusear o Termux em um dispositivo <span class="highlight">Android 13 Sem Root</span> é a diferença entre um entusiasta e um Arquiteto de Operações. O Android 13 possui travas rigorosas no Kernel. Existe um limite físico inegociável nesta camada: <span class="alert-red">Você não poderá executar Sniffing de rede em baixo nível (como escutar pacotes via Wireshark) e não conseguirá capturar Hashes de Wi-Fi.</span></p>
-        <p>Entretanto, o espaço de usuário é vasto. Você é perfeitamente capaz de utilizar as ferramentas padrões do ecossistema <strong>Kali Linux</strong> que não exigem Raw Sockets. O arsenal homologado inclui: <strong>Nmap (Connect Scans), SQLMap, Metasploit Framework, ferramentas de OSINT (SpiderFoot, Shodan CLI), roteadores de tráfego e todo o ambiente de desenvolvimento Python, Node.js, Zig e C.</strong></p>
+        <p>Entretanto, o espaço de usuário é vasto. Você é perfeitamente capaz de utilizar as ferramentas padrões do ecossistema <strong>Kali Linux</strong> que não exigem Raw Sockets. O arsenal homologado inclui: Nmap (Connect Scans), SQLMap, Metasploit Framework, ferramentas de OSINT (SpiderFoot, Shodan CLI), roteadores de tráfego e todo o ambiente de desenvolvimento Python, Node.js, Zig e C.</p>
     </div>
 
     <div class="module">
-        <h2>[6] ORQUESTRAÇÃO OFFSHORE (A CONEXÃO VPS)</h2>
-        <p>A limitação de hardware de um smartphone é irrelevante quando você muda a arquitetura. A doutrina exige a criação de uma <span class="highlight">VPS (Virtual Private Server)</span>.</p>
-        <p>Essa VPS irá alocar todos os seus frameworks, processar ferramentas pesadas e sustentar os ataques de Força Bruta. Ao conectar o Termux via SSH, <strong>o seu celular atua única e exclusivamente como um Controle Remoto</strong>. Para o hardware do Android, nada muda; não há estresse de processamento, não há drenagem de bateria. Todo o cálculo computacional ocorre remotamente, orquestrado pela ponta dos seus dedos.</p>
+        <h2>[6] O PARADIGMA DO DESACOPLAMENTO (VPS)</h2>
+        <p>A limitação de hardware de um smartphone é irrelevante quando você altera a arquitetura. A doutrina tática exige a transferência da carga de processamento pesado para uma <span class="highlight">VPS (Virtual Private Server)</span>.</p>
+        <p>A VPS aloca os frameworks e sustenta os ataques de força bruta. Neste cenário, <strong>o terminal mobile atua única e exclusivamente como uma interface de comando e controle (C2)</strong>. O cálculo computacional ocorre remotamente, blindando o hardware do aparelho.</p>
         
-        <p><strong>Zonas de Hospedagem (Tier 1 a Bulletproof):</strong></p>
+        <p><strong>Topologia de Hospedagem:</strong></p>
         <p>
-        ◈ <a href="https://aws.amazon.com/free/" target="_blank">AWS / Oracle Cloud</a>: Instâncias Tier-Free para reconhecimento OSINT básico.<br>
-        ◈ <a href="https://www.digitalocean.com/" target="_blank">DigitalOcean / Linode</a>: VPS comerciais rápidas para processamento bruto e orquestração de scripts.<br>
-        ◈ <strong>Provedores Offshore (Moldávia, Islândia, Romênia)</strong>: Jurisdições seguras para arquiteturas de Red Team que necessitam ignorar solicitações de DMCA e operar sob OPSEC máximo (Ex: Shinjiru, FlokiNET).
+        ◈ <strong>Nível Comercial:</strong> AWS, Oracle, DigitalOcean (Foco em processamento lícito e OSINT).<br>
+        ◈ <strong>Nível Bulletproof:</strong> Provedores offshore em jurisdições seguras para arquiteturas de Red Team que necessitam operar sob máxima resiliência (Ex: Islândia, Romênia).
         </p>
 
-        <p><strong>Comando de Engate Seguro (SSH):</strong></p>
-        <pre><code># Conexão remota utilizando chaves criptográficas (Nunca use senhas textuais)
-ssh -i ~/.ssh/id_rsa root@IP_DA_SUA_VPS</code></pre>
+        <p class="alert-red">ALERTA DE OPSEC E ARQUITETURA:</p>
+        <p>Na teoria básica, a conexão entre o celular e a VPS é feita por um túnel SSH direto. <strong>Na doutrina de operações avançadas, conexões diretas são riscos críticos de rastreabilidade.</strong> A arquitetura de elite não conecta o nó de origem diretamente ao nó de destino. A comunicação real envolve zonas de isolamento (sandboxing), roteamento fragmentado, múltiplas VPNs nativas e proxies encadeados. O método exato de engate é, e deve ser, mantido classificado pelo operador.</p>
     </div>
 
     <div class="module-critical">
         <h2 style="color: var(--c-red); border-left-color: var(--c-red);">[7] BLINDAGEM DA CADEIA DE SUPRIMENTOS (SUPPLY CHAIN)</h2>
         <p class="alert-red">"O analfabetismo digital começa pela negligência de um único aspecto rotineiro."</p>
-        <p>Você baixa bibliotecas, repositórios clonados e pacotes todos os dias para o seu Kali/Termux. Achar que uma dependência está limpa apenas porque é uma "atualização de rotina" é o erro primário que derruba corporações inteiras. Um pacote suspeito não verificado pode conter <strong>Droppers, Ransomwares, Worms ou Backdoors</strong> engatilhados para infectar sua VPS de produção ou a sua base local.</p>
-        <p>Gastar de 30 a 40 minutos fazendo a checagem manual de bibliotecas antes de instalá-las no seu sistema não é "perda de tempo", é <strong>higiene cibernética e sobrevivência operacional</strong>.</p>
+        <p>Você baixa bibliotecas, repositórios clonados e pacotes todos os dias. Achar que uma dependência está limpa apenas porque é uma "atualização de rotina" é o erro primário que derruba corporações inteiras. Um pacote suspeito não verificado pode conter <strong>Droppers, Ransomwares ou Backdoors</strong> engatilhados para infectar sua VPS ou a sua base local.</p>
+        <p>Fazer a checagem manual de bibliotecas antes de instalá-las no sistema é <strong>higiene cibernética e sobrevivência operacional</strong>.</p>
         
         <p><strong>Comandos Mandatórios de Verificação Estática:</strong></p>
         
-        <p>1. Verificação de Integridade (Hash Check): Garante que a biblioteca não foi alterada/envenenada durante o download.</p>
+        <p>1. Verificação de Integridade (Hash Check):</p>
         <pre class="cmd-red"><code># Gere o hash local e compare com a assinatura oficial do desenvolvedor
 sha256sum pacote_baixado.tar.gz
 md5sum ferramenta_suspeita.py</code></pre>
@@ -152,22 +149,21 @@ md5sum ferramenta_suspeita.py</code></pre>
 # Rode o comando abaixo dentro da pasta do projeto
 pip-audit</code></pre>
 
-        <p>3. Escaneamento Estático Anti-Malware no Terminal (ClamAV): O operador de elite varre o diretório antes de executar qualquer código de terceiros.</p>
+        <p>3. Escaneamento Estático Anti-Malware no Terminal (ClamAV):</p>
         <pre class="cmd-red"><code>pkg install clamav
-freshclam # Atualiza o banco de dados contra assinaturas de novos worms/droppers
+freshclam # Atualiza assinaturas
 clamscan -r -i /caminho/para/o/diretorio/da/biblioteca</code></pre>
     </div>
 
     <div class="module">
         <h2>[8] FUSÃO CIBERCINÉTICA: ROOT E BARE-METAL</h2>
-        <p>O cenário muda drasticamente quando as amarras do sistema Android são removidas. Um celular com <span class="highlight">Root</span> destrava as capacidades da placa de rede física.</p>
-        <p>Mas a letalidade absoluta reside na fusão de arquiteturas: <strong>O Físico e o Código</strong>. Quando acoplamos o dispositivo a um hardware externo (como um <strong>Raspberry Pi</strong>), unificamos os extremos. O microcomputador assume as injeções de rádio (Wi-Fi) em redes corporativas, a VPS lida com o tráfego pesado na nuvem e o smartphone, operando via Termux, comanda a sinfonia. Essa combinação eleva o poder de persuasão digital ao nível de APT, blindando o aparelho principal.</p>
+        <p>O cenário muda drasticamente quando as amarras do sistema Android são removidas. Um celular com Root destrava as capacidades da placa de rede física.</p>
+        <p>Mas a letalidade absoluta reside na fusão de arquiteturas: <strong>O Físico e o Código</strong>. Quando acoplamos o dispositivo a um hardware externo (como um Raspberry Pi), unificamos os extremos. O microcomputador assume as injeções de rádio em redes corporativas, a VPS lida com o tráfego pesado e o smartphone comanda a operação, blindando o aparelho principal.</p>
     </div>
 
     <div class="module">
         <h2>[9] OPSEC AVANÇADO: CAMADAS DE CEBOLA</h2>
-        <p>Se o seu celular é apenas o nó de comando, o seu anonimato precisa ser impenetrável. Dentro dessa arquitetura, utilizamos túneis de VPN para ofuscar o tráfego inicial.</p>
-        <p>Através do Termux, integramos o <strong>Orbot</strong> (o motor da rede Tor) e emparelhamos com o <em>Proxychains</em>. Essa estrutura de tráfego roteia todas as suas requisições da linha de comando por múltiplas <span class="highlight">camadas de cebola (Onion Layers)</span> antes de atingirem a sua VPS ou o alvo final. O resultado é um escudo impenetrável de metadados, garantindo anonimato extremo e operação limpa no abismo digital.</p>
+        <p>O anonimato precisa ser impenetrável. Através da orquestração avançada, o tráfego da linha de comando passa por múltiplas <span class="highlight">camadas de cebola (Onion Layers)</span> através da rede Tor antes de atingir o alvo final. O resultado é um escudo forte de metadados, garantindo operação limpa no abismo digital.</p>
     </div>
 
     <p style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--c-gold); text-shadow: 0 0 5px rgba(255,175,0,0.5);">PHANTOM APT │ INICIATIVA CONTRA O ANALFABETISMO DIGITAL</p>
